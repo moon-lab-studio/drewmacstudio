@@ -1,0 +1,19 @@
+body {
+    border: 0;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(26, 26, 26);
+    color:rgb(230, 230, 230);
+    font-family: Gotham, Futura PT, Helvetica, Arial, sans-serif;
+}
+
+header {
+    background-image: url(https://cdnb.artstation.com/p/assets/images/images/014/980/483/large/andrew-macdonald-low-poly-water-glass-lrg.jpg?1546570109);
+    height: 100vh;
+    background-position: center;
+    background-clip: content-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
