@@ -1,4 +1,3 @@
-import porfolioData from '../portfolio.json'
-
-let slideShow = JSON.stringify('hero')
-console.log(slideShow[0])
+import potfolopData from '../portfolio.json'
+const firstImage = JSON.parse(potfolopData)
+document.getElementById("test").innerHTML = firstImage[0]
