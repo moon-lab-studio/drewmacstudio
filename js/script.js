@@ -1,3 +1,7 @@
-import potfolopData from '../portfolio.json'
-const firstImage = JSON.parse(potfolopData)
-document.getElementById("test").innerHTML = firstImage[0]
+getText("../portfolio.json");
+
+async function getText(file) {
+  let myObject = await fetch(file);
+  let myText = await myObject.text();
+  document.getElementById("test").innerHTML = myText;
+}
