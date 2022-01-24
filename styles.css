@@ -17,3 +17,13 @@ header {
     justify-content: space-around;
     align-items: center;
 }
+section {
+    max-width: 100vh;
+    display: flex;
+    flex-wrap:wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+section div {
+    max-width: 30%;
+}
