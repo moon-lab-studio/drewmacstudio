@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slideshow Experiment</title>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            color: white;
+        }
+        #slide1 {
+            background-image: url(https://www.nasa.gov/sites/default/files/styles/full_width_feature/public/thumbnails/image/pia21904-1041.jpg);
+        }
+        #slide2 {
+            display: none;
+            background-image: url(https://www.nasa.gov/sites/default/files/styles/full_width_feature/public/thumbnails/image/pia21355-1041.jpg);
+        }
+        #slide3 {
+            display: none;
+            background-image: url(https://www.nasa.gov/sites/default/files/styles/full_width_feature/public/thumbnails/image/pia21895_impactsite_figa_finalimage_1042.png);
+        }
+        .slideshowBox {
+            display: flex;
+            flex-direction: column;
+        }
+        .slide {
+            display: block;
+            background-color: rgb(37, 76, 88);
+            height: 100vh;
+            background-repeat: no-repeat;
+            background-position: center, center;
+            background-size: cover;
+        }
+        button {
+            background-color: rgba(255,255,255,.5);
+            border-radius: 1rem;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="slideshowBox">
+        <div class="slide change" id="slide1">
+            <div class="slideNumber">1</div>
+            <div class="caption">Contrasting Crescents</div>
+        </div>
+        
+        <div class="slide change" id="slide2">
+            <div class="slideNumber">2</div>
+            <div class="caption">Caption 2</div>
+        </div>
+
+        <div class="slide change" id="slide3">
+            <div class="slideNumber">3</div>
+            <div class="caption">Caption 3</div>
+        </div>
+        <button id="prev" onclick="changeSlide(-1)">&#10094;</button>
+        <button id="next" onclick="changeSlide(1)">&#10095;</button>
+    </div>
+    <div>
+        <span class="dot" onclick="currentSlide(0)"></span>
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+    </div>
+</body>
+</html>
