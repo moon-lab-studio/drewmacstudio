@@ -6,39 +6,55 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Drew Mac</title>
-    <script>import 'portfolio.json'</script>
     <link rel="stylesheet" href="styles.css">
     
 
 </head>
 <body>
     <span id="test"></span>
-   
+    <nav>
+        
+        <div class="internal-nav">
+            <a href="#">Home</a>
+            <a href="#">3D</a>
+            <a href="#">Contact</a>
+        </div>
+        <span>Drew Mac Studio</span>
+        <div class="external-nav">
+            <a href="#">Youtube</a>
+            <a href="#">Twitter</a>
+            <a href="#">Artstation</a>
+        </div>
+    </nav>
     <header>
         <h1>Drew Mac Studio</h1>
         <button>Book Today!</button>
     </header>
-    <nav>
-        <ul class="internal-nav">
-            <span>Drew Mac Studio</span>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">3D</a></li>
-            <li><a href="#">Contact</a></li>
-        </ul>
-        <ul class="external-nav">
-            <li><a href="#">Youtube</a></li>
-            <li><a href="#">Twitter</a></li>
-            <li><a href="#">Artstation</a></li>
-        </ul>
 
-    </nav>
     <section class="featured-work" id="featured">
         
         <h1>Featured Work</h1>
     </section>
     <footer>
-        <span>&#169; 2022 Andrew MacDonald</span>
+		<div>
+			<form action="post" class="footerBlock contact">
+				<span>Contact us</span>
+				<input type="email" name="email">
+				<input type="text" name="message" id="message">
+				<input type="button" value="submit">
+			</form>
+			<div class="footerBlock internal-nav">
+				<a href="#">Home</a>
+				<a href="#">3D</a>
+				<a href="#">Contact</a>
+			</div>
+			<div class="footerBlock external-nav">
+				<a href="#">Youtube</a>
+				<a href="#">Twitter</a>
+				<a href="#">Artstation</a>
+			</div>
+		</div>
+        <div class="copyright">&#169; 2022 Andrew MacDonald</div>
     </footer>
-    <script src="js/script.js" defer></script>
 </body>
 </html>
