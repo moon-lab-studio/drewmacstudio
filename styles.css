@@ -7,7 +7,7 @@ body {
     font-family: Futura PT, Gotham, Helvetica, Arial, sans-serif;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    min-height: 100vh;
 }
 a {
     text-decoration: none;
@@ -15,7 +15,7 @@ a {
 }
 header {
     background-image: /*url(https://cdnb.artstation.com/p/assets/images/images/014/980/483/large/andrew-macdonald-low-poly-water-glass-lrg.jpg?1546570109)*/ url(images/illustration-5.jpeg);
-    height: 50vh;
+    /*! height: 50vh; */
     background-position: center;
     background-clip: content-box;
     display: flex;
@@ -23,15 +23,17 @@ header {
     justify-content:space-around;
     align-content: center;
     align-items: center;
+    flex-grow: 2;
 }
 section {
     max-width: 100vh;
     display: flex;
     flex-wrap:wrap;
 
+    flex-grow: 1;
 }
 section div {
-    max-width: 30%;
+    /*! max-width: 30%; */
 }
 nav {
     background-color: rgba(230, 230, 230, .85);
@@ -39,11 +41,12 @@ nav {
     justify-content: space-between;
     box-sizing: border-box;
     align-items: center;
-    position: sticky;
 }
 nav a, nav span{
     padding: .5em;
 }
+
+/*****FOOTER*********/
 footer {
     display: flex;
     flex-direction: column;
@@ -63,3 +66,26 @@ footer .footerBlock {
 }
 footer .copyright {
 }
+/******CONTENT***********/
+.projects {
+    display: flex;
+    flex-direction: column;
+}
+.imageGrid {
+     display: flex;
+     flex-direction: row;
+     flex-wrap: wrap;
+     justify-content: space-around;
+     align-items: center;
+ }
+ .imageGrid a {
+     flex-basis: fit-content;
+     
+ }
+
+ .imageGrid img {
+
+    object-fit: cover;
+    max-width: 25vw;
+ }
+ }
