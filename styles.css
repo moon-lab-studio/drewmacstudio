@@ -32,9 +32,7 @@ section {
 
     flex-grow: 1;
 }
-section div {
-    /*! max-width: 30%; */
-}
+
 nav {
     background-color: rgba(230, 230, 230, .85);
     display: flex;
@@ -55,7 +53,6 @@ footer {
 footer div {
     display: flex;
     justify-content: space-evenly;
-    
     background-color: rgb(0, 0, 0);
 }
 footer .footerBlock {
@@ -64,8 +61,7 @@ footer .footerBlock {
     flex-direction: column;
     align-content: space-between;
 }
-footer .copyright {
-}
+
 /******CONTENT***********/
 .projects {
     display: flex;
@@ -88,4 +84,4 @@ footer .copyright {
     object-fit: cover;
     max-width: 25vw;
  }
- }
+ 
