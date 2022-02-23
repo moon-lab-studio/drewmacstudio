@@ -1,0 +1,57 @@
+/* Global Stylesheet*/
+body {
+    margin: 0;
+    padding: 0;
+    background-color: rgb(36, 36, 36);
+    font-family: 'Work sans', 'Josefin sans', Helvetica, Arial, sans-serif;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Josefin Sans', 'Work Sans', Helvetica, Arial, sans-serif;
+}
+a {
+    color: rgb(255, 0, 106);
+    text-decoration: none;
+}
+
+ /**Branding***/
+ .gradientLogo {
+    background: linear-gradient(90deg, rgb(255, 0, 119), rgb(68, 0, 255), cyan);
+    background-clip:text;
+    max-width: calc(100vw/4);
+    min-width: calc(100vh/4);
+    
+}
+.gradientTitle {
+    background: linear-gradient(90deg, rgb(255, 0, 119), rgb(68, 0, 255), cyan);
+    background-clip: text;
+    color:rgba(255,0,0,0);
+}
+
+/****Nav Bar ******/
+nav {
+    display: flex;
+    justify-content: space-around;
+    background-color: black;
+    align-items: center;
+}
+nav h1 {
+    font-size: 1.5rem;
+    margin: 1rem;
+}
+
+/*** Splash Header ***/
+header {
+    background-image: url(../images/header-1.jpg);
+    min-height: calc(100vh - 3.5rem);
+    background-attachment: fixed;
+    perspective: 30px;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+ header h1:first-of-type {
+    font-size: calc(100vh/8);
+ }
+

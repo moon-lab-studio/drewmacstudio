@@ -6,59 +6,32 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Drew Mac</title>
-    <link rel="stylesheet" href="styles.css">
-    
+    <link rel="stylesheet" href="css/globalStyles.css">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200;500&family=Work+Sans:ital,wght@0,300;0,600;1,300&display=swap');
+    </style>
 
 </head>
 <body>
-    <span id="test"></span>
-    <nav>
+   <nav>
+        <h1 class="gradientTitle">Drew Mac Studio</h1>
+       <div>
+           <a href="index.html">Home</a>
+            <a href="#projectGrid">Portfolio</a>
+    </div>
+       
+   </nav>
+   <header class="splash">
+        <img src="images/logoNeon.svg" alt="DMS Logo" class="gradientLogo">
+       <a href="https://grayjay.xyz/contact">Contact Us</a>
+   </header>
+    <section id="projectGrid">
         
-        <div class="internal-nav">
-            <a href="#">Home</a>
-            <a href="#">3D</a>
-            <a href="#">Contact</a>
-        </div>
-        <span>Drew Mac Studio</span>
-        <div class="external-nav">
-            <a href="#">Youtube</a>
-            <a href="#">Twitter</a>
-            <a href="#">Artstation</a>
-        </div>
-    </nav>
-    <header>
-        <h1>Drew Mac Studio</h1>
-        <button>Book Today!</button>
-    </header>
-
-    <section class="projects" id="projects">
-         <h1>projects</h1>
-         <div class="imageGrid">
-             <a class="gridItem" href="projects/project1.html"><img src="images/illustration-1.jpeg" alt="Project 1">Label</a>
-             <a class="gridItem" href="projects/project2.html"><img src="images/illustration-2.jpeg" alt="Project 1">Label</a>
-             <a class="gridItem" href="projects/project3.html"><img src="images/illustration-3.jpeg" alt="Project 1">Label</a>
-         </div>
     </section>
-    <footer>
-		<div>
-			<form action="post" class="footerBlock contact">
-				<span>Contact us</span>
-				<input type="email" name="email">
-				<input type="text" name="message" id="message">
-				<input type="button" value="submit">
-			</form>
-			<div class="footerBlock internal-nav">
-				<a href="#">Home</a>
-				<a href="#">3D</a>
-				<a href="#">Contact</a>
-			</div>
-			<div class="footerBlock external-nav">
-				<a href="#">Youtube</a>
-				<a href="#">Twitter</a>
-				<a href="#">Artstation</a>
-			</div>
-		</div>
-        <div class="copyright">&#169; 2022 Andrew MacDonald</div>
-    </footer>
+   <footer>
+       <span>&#169; Gray Jay LLC</span>
+       <a href="https://grayjay.xyz/contact">Contact</a>
+   </footer>
 </body>
 </html>
