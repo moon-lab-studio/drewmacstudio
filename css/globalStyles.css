@@ -2,7 +2,7 @@
 :root {
     --shadowBlur: 1em;
     --shadowDist: .5em;
-    --blur: 2em;
+    --blur: .5rem;
     --gradient: 90deg, rgb(255, 0, 119), rgb(68, 0, 255), cyan;
     --dark: black;
     --darkMed: rgb(15, 15, 15);
@@ -93,7 +93,7 @@ header {
     align-items: center;
 }
  header h1:first-of-type {
-    font-size: calc(100vh/8);
+    font-size: calc(100vh/10);
 /*     text-shadow: var(--titleShadow);
  */ 
 }
