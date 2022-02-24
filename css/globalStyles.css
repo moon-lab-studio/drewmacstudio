@@ -31,9 +31,25 @@ a {
 nav {
     display: flex;
     justify-content: space-around;
-    background-color: black;
+    background-color: rgba(0,0,0,.8);
     align-items: center;
+    position:fixed;
+    z-index: 1;
+    width: 100vw;
+    box-shadow: 0 1em 1em rgba(0, 0, 0, .5) ;
+    
 }
+@supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
+    nav {
+      -webkit-backdrop-filter: blur(20px) grayscale(40%);
+      backdrop-filter: blur(20px) grayscale(40%);
+    }
+  }
+  @supports not ((-webkit-backdrop-filter: none) or (backdrop-filter: none)) {
+    nav {
+      background-color: rgba(0, 0, 0, .8);
+    }
+  }
 nav h1 {
     font-size: 1.5rem;
     margin: 1rem;
@@ -42,7 +58,7 @@ nav h1 {
 /*** Splash Header ***/
 header {
     background-image: url(../images/header-1.jpg);
-    min-height: calc(100vh - 3.5rem);
+    min-height: 100vh;
     background-attachment: fixed;
     perspective: 30px;
     background-repeat: no-repeat;
@@ -55,3 +71,15 @@ header {
     font-size: calc(100vh/8);
  }
 
+/*** Image Grid ***/
+.projectGrid {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    min-height: 100vh;
+    padding: 2rem;
+    grid-gap: 2rem;
+}
+.projectGrid > * {
+    background-position: center;
+
+}
