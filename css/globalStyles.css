@@ -27,7 +27,9 @@ a {
     text-decoration: none;
     font-weight: bold;
 }
-
+section {
+    padding-block: 2rem;
+}
  /** Graident Text***/
  .gradientLogo {
     background: linear-gradient();
@@ -133,8 +135,8 @@ footer {
 /* *** 2 Column Section *** */
 .twoColumn {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: space-evenly;
+    align-items: top;
     background-color: var(--dark);
 }
 .twoColumn > * {
@@ -145,10 +147,10 @@ footer {
     flex-grow: 1;
     object-fit: cover;
 }
-
-.twoColumn img {
-    
+.paddedImage {
+    padding-inline: 1rem;
 }
+
 .twoColumn div > *{
     margin-block-start: 2rem;
     margin-block-end: 0;
