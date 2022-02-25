@@ -1,7 +1,8 @@
 /* Global Stylesheet*/
 :root {
-    --shadowBlur: 1em;
-    --shadowDist: .5em;
+    --shadowBlur: 2rem;
+    --shadowDistX: 0rem;
+    --shadowDistY: .5rem;
     --blur: .5rem;
     --gradient: 90deg, rgb(255, 0, 119), rgb(68, 0, 255), cyan;
     --dark: black;
@@ -28,7 +29,7 @@ a {
     font-weight: bold;
 }
 section {
-    padding-block: 2rem;
+    padding-block: 2rem 0;
 }
  /** Graident Text***/
  .gradientLogo {
@@ -56,7 +57,7 @@ nav {
     position:fixed;
     z-index: 1;
     width: 100vw;
-    box-shadow: 0 var(--shadowBlur) var(--shadowDist) rgba(0, 0, 0, .6);
+    box-shadow: var(--shadowDistX) var(--shadowDistY) var(--shadowBlur) rgba(0, 0, 0, .6);
     
 }
 @supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
@@ -105,6 +106,7 @@ footer {
     display: flex;
     justify-content: space-around;
     min-height: 25vh;
+    margin-block:2rem 0;
 }
 /*** Image Grid ***/
 .projectGrid {
@@ -174,7 +176,8 @@ footer {
 .fullWidthImage {
     max-height: 100vh;
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
+    background-color: var(--dark);
 }
 
 .fullWidthImage img {
@@ -189,4 +192,14 @@ footer {
     .fullWidthImage img {
         object-fit: contain;
     }
+}
+.ytVideo  {
+    display: flex;
+    justify-content: space-evenly;
+    object-fit: contain;
+    background-color: var(--dark);
+    
+}
+.ytVideo iframe {
+    min-height: 100vh;
 }
