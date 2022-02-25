@@ -102,11 +102,18 @@ header {
 }
 /* *** Footer *** */
 footer {
-    background: linear-gradient(var(--gradient));
+    background: var(--dark);
     display: flex;
     justify-content: space-around;
     min-height: 25vh;
     margin-block:2rem 0;
+    align-items: center;
+}
+footer > * {
+    background: linear-gradient(var(--gradient));
+    background-clip: text;
+    -webkit-background-clip: text;
+    color:rgba(255,0,0,0);
 }
 /*** Image Grid ***/
 .projectGrid {
