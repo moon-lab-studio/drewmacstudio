@@ -92,7 +92,7 @@ header {
     background-repeat: no-repeat;
     display: flex;
     flex-direction: column;
-    justify-content: end;
+    justify-content: space-around;
     align-items: center;
 }
  header h1:first-of-type {
