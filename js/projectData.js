@@ -1,24 +1,4 @@
-//Meta Classes containing the different class types.
-class Portfolio {
-    constructor(projectList){
-        this._projectList = [];
-    }
-    get projectList() {
-        return this._projectList;
-    }
-    set projectList(newListItem){
-        this._projectList.push(newListItem);
-    }
-}
-/*Portfolios contain different types of work. 
-All projects are grouped in to the AllWork portfolio on creation.
-2D and illustration: DesignWork, 
-3D: PolyWork, 
-Ui: UiWork*/
-const AllWork = new Portfolio;
-const DesignWork = new Portfolio;
-const PolyWork = new Portfolio;
-const UiWork = new  Portfolio;
+
 
 // Function to add work to a library, called during class creation *** Not yet working***
 /*
@@ -33,7 +13,6 @@ class Project {
         this._title = title;
         this._media = media;
         this._info = info;
-        this._type = 'General';
     }
     get title() {
         return this._title;
@@ -60,12 +39,20 @@ class Project {
         }
     }
 }
+//The Design library is for static 2D work. Illustrations, print design, etc. 
+class Design extends Project {
+    constructor(title, media, info){
+        super(title, media, info);
+        this._type = 'design';
+    }
 
-// Use the Ui class for web design work, apps and  any other interactive work
-class Ui extends Project {
+
+}
+// Use the Dev class for web design work, apps and  any other interactive work
+class Dev extends Project {
     constructor(title, media, info, link){
         super(title, media, info);
-        this._type = 'UI';
+        this._type = 'dev';
     }
 }
 
@@ -77,23 +64,51 @@ class Poly extends Project {
     }
 }
 
+//Meta Classes containing the different class types.
+class Portfolio {
+    constructor() {
+        this._projectList = [];
+    }
+    get projectList() {
+        return this._projectList;
+    }
+    addProjects(newList){
+        for(let i = 0; i < newList.length; i++){
+            this._projectList.push(newList[i]);
+        }
+    }
+
+}
+/*Portfolios contain different types of work. 
+All projects are grouped in to the AllWork portfolio on creation.
+2D and illustration: DesignWork, 
+3D: PolyWork, 
+Ui: UiWork*/
+const AllWork = new Portfolio;
+const DesignWork = new Portfolio;
+
 // Class Creation
-const craftBeer = new Project (
+
+const craftBeer = new Design (
     'Craft Beer Festival',
     ['craft-beer-1'],
     'Commissioned poster for the Savannah Craft Beer Festival'
 );
-const politicalWarfare = new Project (
+const politicalWarfare = new Design (
     'Political Warfare',
     ['political-warfare-1'],
     'Editorial illustration for an article in the Harvard Business'
 );
-const seven = new Project (
+const seven = new Design (
     'Seven',
     ['seven-1'],
     'Personal project redesigning the poster for the movie Seven'
 );
 
 // Enter test classes below this line.
-console.log(AllWork.projectList);
+DesignWork.addProjects([craftBeer, politicalWarfare]);
+console.log(craftBeer.title);
+console.log(typeof(DesignWork.projectList))
+console.log(DesignWork.projectList[1].title)
+
 

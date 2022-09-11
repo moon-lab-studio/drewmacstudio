@@ -1,6 +1,27 @@
 {
-    "name" : "dms_portfolio",
-    "type" : "module",
-    "homepage": "https://drewmacstudio.com",
-    "keywords" : ["portfolio", "web", "development", "3D", "UI"]
+  "name": "dms_portfolio",
+  "type": "module",
+  "homepage": "https://drewmacstudio.com",
+  "keywords": [
+    "portfolio",
+    "web",
+    "development",
+    "3D",
+    "UI"
+  ],
+  "version": "1.0.0",
+  "description": "portfolio site for drewmac studio",
+  "main": "js/projectData.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Grayxyz/drewmacstudio.git"
+  },
+  "author": "drew mac",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Grayxyz/drewmacstudio/issues"
+  }
 }
