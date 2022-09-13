@@ -1,69 +1,6 @@
+import {Project, Design, Dev, Poly} from './projectClasses.js';
 
-
-// Function to add work to a library, called during class creation *** Not yet working***
-/*
-const addWork = (project, portfolio) => {
-    portfolio.projectList = project; 
-}
-*/
-
-// Primary project class. Use the defualt class for illustrations, design and other still images.
-class Project {
-    constructor(title, media, info) {
-        this._title = title;
-        this._media = media;
-        this._info = info;
-    }
-    get title() {
-        return this._title;
-    }
-    get type() {
-        return this._type;
-    }
-    get media() {
-        return this._media;
-    }
-    get info() {
-        return this._info;
-    }
-    set imagePath(path) {
-        for(let i = 0; i < this._media.length; i++){
-            const imgName = this._media[i];
-            this._media[i] = path + imgName;
-        }
-    }
-    set imageExt(ext) {
-        for(let i=0; i < this._media.length; i++){
-            const imgName = this._media[i];
-            this._media[i] = imgName + ext;
-        }
-    }
-}
-//The Design library is for static 2D work. Illustrations, print design, etc. 
-class Design extends Project {
-    constructor(title, media, info){
-        super(title, media, info);
-        this._type = 'design';
-    }
-
-
-}
-// Use the Dev class for web design work, apps and  any other interactive work
-class Dev extends Project {
-    constructor(title, media, info, link){
-        super(title, media, info);
-        this._type = 'dev';
-    }
-}
-
-//Use the Poly class for 3D work. Currently only still renders are supported
-class Poly extends Project {
-    constructor(title, media, info, software) {
-        super(title, media, info);
-
-    }
-}
-
+// Libraries 
 //Meta Classes containing the different class types.
 class Portfolio {
     constructor() {
@@ -72,23 +9,40 @@ class Portfolio {
     get projectList() {
         return this._projectList;
     }
-    addProjects(newList){
+    /*addProjects(newList){
         for(let i = 0; i < newList.length; i++){
             this._projectList.push(newList[i]);
         }
+    }*/
+    newProject(project, title, media, info){
+        project = new Design (title, media, info)
+        this._projectList.push(project)
+        AllWork.projectList.push(project);
     }
-
 }
 /*Portfolios contain different types of work. 
 All projects are grouped in to the AllWork portfolio on creation.
 2D and illustration: DesignWork, 
 3D: PolyWork, 
 Ui: UiWork*/
-const AllWork = new Portfolio;
-const DesignWork = new Portfolio;
+let AllWork = new Portfolio;
+let DesignWork = new Portfolio;
+let devWork = new Portfolio;
+let polyWork = new Portfolio;
+
+// Design Library
 
 // Class Creation
-
+DesignWork.newProject(
+    "craftBeer",
+    "Craft Beer Festival",
+    ["craft-beer-1"],
+    'Commissioned poster for the Savannah Craft Beer Festival');
+DesignWork.newProject(
+    "politicalWarfare", 
+    "Political Warfare",
+    )
+/*
 const craftBeer = new Design (
     'Craft Beer Festival',
     ['craft-beer-1'],
@@ -104,11 +58,7 @@ const seven = new Design (
     ['seven-1'],
     'Personal project redesigning the poster for the movie Seven'
 );
-
+*/
 // Enter test classes below this line.
-DesignWork.addProjects([craftBeer, politicalWarfare]);
-console.log(craftBeer.title);
-console.log(typeof(DesignWork.projectList))
-console.log(DesignWork.projectList[1].title)
-
-
+console.log(`Design portfolio: first project title: ${AllWork.projectList[0].title}  | Design list length ${AllWork.projectList.length}`)
+console.log(`All work portfolio: first project title: ${AllWork.projectList[0].title}  | All work list length ${AllWork.projectList.length}`)
