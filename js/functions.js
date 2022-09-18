@@ -7,5 +7,7 @@ function camelize(str){
     )
     .replace(/\s+/g, '');
 }
+
+
 export {camelize}
-// Test Cases below this line
+// Test Cases below this line   
